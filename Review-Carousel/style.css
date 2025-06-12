@@ -1,0 +1,131 @@
+/* || RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    background-color: aliceblue;
+
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+
+}
+
+.container .title h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+}
+
+.container .underline{
+    margin: auto;
+    height: 5px;
+    width: 80px;
+    background-color: skyblue;
+    border-radius: 1rem;
+
+}
+
+.container .review{
+    width: 80%;
+    border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    
+}
+
+.container .review{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    background-color: white;
+    margin-bottom: 5rem;
+
+}
+
+.container .img-container{
+    border: 2px solid black;
+    border: none;
+    border-radius: 50%;
+}
+
+.container .img-container img{
+    border-radius: 50%;
+}
+
+.container .review #author{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.container .review #job{
+    color: rgb(0, 177, 248);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.container .review #info{
+    text-align: center;
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+}
+
+/* Arrow buttons */
+
+.container .review .button-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.container .review .button-container button{
+    border: none;
+    background-color: white;
+
+}
+
+.container .review .button-container i{
+    font-size: 2rem;
+    color: blue;
+}
+
+.random-btn{
+    padding: 5px;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    border: 2px solid blue;
+    background-color: rgb(0, 213, 255);
+    font-weight: 500;
+    border-radius: 1rem;
+
+}
+
+
+
+
