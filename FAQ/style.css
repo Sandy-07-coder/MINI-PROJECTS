@@ -1,0 +1,205 @@
+/* || RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root{
+    /* Colors */
+    --BG-COLOR:aliceblue;
+    --BG-HEADER: #2c3e50;
+    --BG-FAQ-BOX:white;
+    --HEADER-COLOR:#FFFFFF;
+    --Q-COLOR: #2c3e50;
+    --A-COLOR:#666666;
+    --BG-FOOTER:#212121;
+    --FOOTER-COLOR:#bbbbbb;
+
+    /* FONT */
+
+    --FF-TITLE:'Great Vibes', cursive;
+    --FF:'Poppins', sans-serif;
+
+    /* BOX-SHADOW */
+
+    --BOX-SHADOW-HEADER: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --BOX-SHADOW-FAQ: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    
+}
+
+/* Body */
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    background-color: var(--BG-COLOR);   
+}
+
+/* HEADER */
+
+.site-header{
+    background-color: var(--BG-HEADER);
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 1.5rem);
+    box-shadow: var(--BOX-SHADOW-HEADER);
+    
+
+}
+
+.site-header__title{
+    color: var(--HEADER-COLOR);
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* FOOTER */
+
+.site-footer{
+    background-color: var(--BG-FOOTER);
+}
+
+.site-footer__copyright{
+    color: var(--FOOTER-COLOR);
+    font-size: 1em;
+    text-align: center;
+
+}
+
+/* MAIN */
+
+.main-content{
+    flex-grow: 1;
+    overflow-y: auto;
+    padding :1rem;
+    display: grid;
+    place-content: center;
+    font-family: var(--FF);
+}
+
+/* Questions */
+
+.questions{
+    display: grid;
+    grid-template-rows: 50px auto;
+    row-gap: 2rem;
+    
+}
+
+.questions__title{
+    text-align: center;
+}
+
+.questions__title__text{
+    font-family: var(--FF-TITLE);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: rgb(255, 179, 0);
+}
+
+.questions__question-center{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    gap: 3rem;
+
+}
+
+.question{
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--BG-FAQ-BOX);
+    box-shadow: var(--BOX-SHADOW-FAQ);
+    width: 80VW;
+    max-width: 1100px;
+}
+
+.question__title-line{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question__title-line__title{
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+}
+
+/* Styling the button */
+
+.question__title-line__btn{
+    font-size: 1.75rem;
+    border: none;
+    background-color: inherit;
+}
+
+.fas{
+    color: gold;
+}
+
+/* Styling the answer */
+
+.question__answer{
+    padding-top: 1rem;
+    text-align: center;
+    border-top: 2px solid rgba(0,0, 0, 0.2);
+}
+
+.question__answer__text{
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Hiding the answer until the button is click */
+
+.question__answer{
+    display: none;
+}
+
+/* Hiding the button minus until the button is click */
+
+.minus-icon{
+    display: none;
+}
+
+/* The answer and the minus icon show, plus icon disappear only if it had show-text  */
+
+/* showing the answer */
+
+.show-text .question__answer{
+    display: block;
+}
+
+/* displaying the minus icon */
+
+.show-text .minus-icon{
+    display: block;
+}
+
+/* Removing the plus-icon */
+
+.show-text .plus-icon{
+    display: none;
+}
+
+/* adding the margin bottom on question__title-line only on show-text */
+
+.show-text .question__title-line{
+    margin-bottom: 1rem;
+
+}
+
+
+
+
+
+
+
+
