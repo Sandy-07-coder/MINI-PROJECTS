@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    height:100vh;
+    background: 
+    linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url('hero-bcg.jpeg') center/cover repeat;
+
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0.5rem;
+}      
+
+.nav-center{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0.25rem 0.75rem;
+}
+
+.nav-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.nav-header img{
+    height: 80px;
+}
+
+.nav-header .nav-toggle{
+    background-color: inherit;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.links-container{
+    flex-grow: 1;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s all linear;
+    
+}
+
+.show-links{
+    height: 200px;
+}
+
+.links{
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+.links li{
+    margin-left: 0rem;
+}
+
+.scroll-link{
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    
+}
+
+.scroll-link:hover{
+    border: 2px solid rgba(0,0,0, 0.5);
+    transform: scale(1.2);
+    transition: transform 0.3s linear;
+    padding-left: 3rem;
+    transition:padding 0.3s linear;
+}
+
+.banner{
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner .container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+
+}
+
+.container h1{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.container p{
+    color: white;
+    font-size: 1.25rem;
+
+}
+
+.container .btn{
+    border: 2px solid white;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{
+    background-color: white;
+    color: goldenrod;
+}
+
+
+.section{
+    height: 100vh;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+}
+
+.title h2{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title h2 span{
+    color: rgb(0, 255, 136);
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 20px;
+
+}
+
+.footer p{
+    text-align: center;
+    color: white;
+
+}
+
+.top-link{
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color:hsla(182,63%,54%);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    color: white;
+    animation: bounce 2s ease-in-out infinite;
+
+    visibility: hidden;
+    z-index: -100;  
+   }
+
+.show-link{
+    visibility: visible;
+    z-index: 100;
+    }
+
+@keyframes bounce {
+    0%,100%{
+            transform: scale(1);
+    }
+    50%{
+            transform: scale(1.5);
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    nav{
+        background-color: inherit;
+        box-shadow: none;
+    }
+
+    /* Fixed nav */
+
+    .fixed-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-center{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .nav-center .nav-toggle{
+        display: none;
+    }
+
+    .links-container{
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: none;
+        height: auto !important;
+        
+    }
+    .links{
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: inherit;
+    }
+    .links .scroll-link{
+        color:black;
+        text-transform: capitalize;
+
+    }
+    .scroll-link:hover{
+        background-color: white;
+        color: goldenrod;
+        transform: unset;
+        transition: unset;
+        padding-left: unset;
+        padding: 0.5rem;
+        border-color: navy;
+        border-radius: 1rem;
+    }
+
+
+
+   
+}
